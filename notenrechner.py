@@ -10,6 +10,9 @@ def berechne_prozentwert(erreichte_punkte, max_punkte):
 
 
 def berechne_note(prozentwert):
+
+    if not isinstance(prozentwert, (int, float)):
+        raise TypeError("Der Prozentwert muss eine Zahl sein.")
     try:
         prozentwert = float(prozentwert)
         
